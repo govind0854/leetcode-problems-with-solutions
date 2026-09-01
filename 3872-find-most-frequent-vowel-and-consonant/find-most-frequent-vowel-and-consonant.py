@@ -1,19 +1,15 @@
 class Solution(object):
     def maxFreqSum(self, s):
         d={}
-        for ch in s:
-            d[ch]=d.get(ch,0)+1
-        max_vowels=0
-        max_consonants=0
+        for i in s:
+            d[i]=d.get(i,0)+1
+        max_v=0
+        max_c=0
         vowels="aeiou"
-        for i in d:
-            if i in vowels:
-                max_vowels=max(max_vowels,d[i])
+        for ch in d:
+            if ch in vowels:
+                max_v=max(max_v,d[ch])
             else:
-                max_consonants=max(max_consonants,d[i])
-        return max_vowels+max_consonants
-        
-
-        
-        
+                max_c=max(max_c,d[ch])
+        return max_v+max_c
         
