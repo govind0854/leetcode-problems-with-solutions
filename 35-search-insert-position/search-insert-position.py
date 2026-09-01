@@ -11,6 +11,3 @@ class Solution(object):
             else:
                 low=mid+1
         return low
-
-        
-        
